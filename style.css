@@ -1,0 +1,185 @@
+/* General resets and body styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url("images/hero-img.jpg") center/cover no-repeat;
+    opacity: 0.4;
+    z-index: -1;
+}
+
+/* Navigation styling */
+nav {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+nav a img {
+    width: 120px; /* Adjusted logo size */
+    height: auto;
+}
+
+/* Form wrapper styling */
+.form-wrapper {
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    background-color: rgba(0, 0, 0, 0.85);
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 26px;
+    color: #fff;
+    letter-spacing: 0.5px;
+}
+
+/* Form control styling */
+.form-control {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #e50914;
+}
+
+label {
+    position: absolute;
+    top: 12px;
+    left: 15px;
+    font-size: 14px;
+    color: #aaa;
+    pointer-events: none;
+    transition: 0.2s;
+}
+
+input[type="text"]:focus + label,
+input[type="password"]:focus + label {
+    top: -10px;
+    font-size: 12px;
+    color: #fff;
+}
+
+/* Password visibility button */
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    background: none;
+    border: none;
+    color: #e50914;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #e50914;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #f40612;
+}
+
+/* Form help (Remember me, etc.) */
+.form-help {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.form-help a {
+    color: #0071e3;
+    text-decoration: none;
+}
+
+.form-help a:hover {
+    text-decoration: underline;
+}
+
+/* Remember me checkbox */
+#me {
+    position: relative;
+    top: -2px;
+    left: -4px;
+}
+
+.remember-me input {
+    margin-right: 5px;
+}
+p{
+    padding-top: 15px;
+}
+/* Small text */
+small {
+    display: block;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #aaa;
+}
+
+small a {
+    color: #0071e3;
+    text-decoration: none;
+}
+
+small a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media screen and (max-width: 400px) {
+    .form-wrapper {
+        width: 90%;
+    }
+
+    nav a img {
+        width: 100px;
+    }
+}
